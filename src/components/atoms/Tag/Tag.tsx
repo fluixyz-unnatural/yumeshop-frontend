@@ -13,6 +13,6 @@ const Wrapper = styled.div<Pick<TagProps, 'color'>>`
   color: white;
 `;
 
-export const Tag: VFC<TagProps> = ({ name, color }: TagProps) => (
+export const Tag: VFC<TagProps> = ({ name, color }) => (
   <Wrapper color={color}>{name}</Wrapper>
 );
