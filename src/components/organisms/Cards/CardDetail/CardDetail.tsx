@@ -3,6 +3,7 @@ import { VFC } from 'react';
 import { PriceDisplay } from 'src/components/atoms/Price/PriceDisplay';
 import { useItem } from 'src/hooks/useShopItem';
 import styled from 'styled-components';
+import { Tags } from '../../Tags';
 
 export type CardDetailProps = {
   itemId: string;
@@ -10,10 +11,29 @@ export type CardDetailProps = {
 
 const CardWrapper = styled.div`
   border-radius: 8px;
+  overflow: hidden;
+  background: white;
   display: flex;
+  position: relative;
 `;
 
-const ItemContent = styled.div``;
+const ItemContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  gap: 8px;
+`;
+
+const ItemName = styled.h4`
+  font-size: 1rem;
+  font-weight: normal;
+`;
+
+const PriceWrapper = styled.div`
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+`;
 
 export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
   const item = useItem({ itemId });
@@ -24,13 +44,15 @@ export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
         width="144"
         height="144"
         src={item.thumbnail}
-        alt={`${item.name}のサムネイル画像１`}
+        alt={`${item.name}のサムネイル画像`}
       />
       <ItemContent>
-        <h4>{item.name}</h4>
-        <div>tags</div>
-        <PriceDisplay price={item.price} />
+        <ItemName>{item.name}</ItemName>
+        <Tags tags={item.tags} />
       </ItemContent>
+      <PriceWrapper>
+        <PriceDisplay price={item.price} />
+      </PriceWrapper>
     </CardWrapper>
   );
 };
