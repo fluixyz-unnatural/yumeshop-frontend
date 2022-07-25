@@ -6,8 +6,11 @@ export type TagProps = {
   color: string;
 };
 
-const Wrapper = styled.span<Pick<TagProps, 'color'>>`
+const Wrapper = styled.div<Pick<TagProps, 'color'>>`
+  display: inline-block;
   background-color: ${(props) => props.color};
+  padding: 0px 4px;
+  color: white;
 `;
 
 export const Tag: VFC<TagProps> = ({ name, color }: TagProps) => (
