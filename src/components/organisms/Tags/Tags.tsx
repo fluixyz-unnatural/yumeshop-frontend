@@ -1,5 +1,5 @@
 import { VFC } from 'react';
-import { Tag, TagProps } from 'src/components/atoms/Tag/Tag';
+import { Tag, TagProps } from 'src/components/atoms/Tag';
 import styled from 'styled-components';
 
 export type TagsProps = {

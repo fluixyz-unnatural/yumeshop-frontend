@@ -1,7 +1,7 @@
 import type { Meta, Story } from '@storybook/react/types-6-0';
-import * as TagStories from 'src/components/atoms/Tag/Tag.stories';
-import { TagProps } from 'src/components/atoms/Tag/Tag';
-import { Tags, TagsProps } from './Tags';
+import * as TagStories from 'src/components/atoms/Tag/index.stories';
+import { TagProps } from 'src/components/atoms/Tag';
+import { Tags, TagsProps } from './index';
 
 export default {
   component: Tags,
