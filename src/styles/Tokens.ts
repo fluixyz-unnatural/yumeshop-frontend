@@ -39,3 +39,9 @@ export const fonts = {
   NotoSansJP: `'Noto Sans JP', sans-serif`,
   Roboto: `'Roboto', sans-serif`,
 } as const;
+
+export const breakpoints = {
+  mb: '375px',
+  tb: '768px',
+  pc: '1152px',
+} as const;
