@@ -10,6 +10,7 @@ import {
   spacingSizes,
 } from 'src/styles/Tokens';
 import { Tags } from 'src/components/organisms/Tags';
+import Color from 'color';
 
 export type CardDetailProps = {
   itemId: string;
@@ -73,11 +74,10 @@ const SaleLabel = styled.div`
   text-align: center;
   color: white;
   font-size: ${fontSizes.fontSize12};
-  background-color: ${colors.Red};
+  background-color: ${Color(colors.Red).alpha(0.5).hexa()};
   position: absolute;
   bottom: 0;
   width: 100%;
-  opacity: 0.5;
   height: 25px;
   line-height: 25px;
   @media screen and (min-width: ${breakpoints.pc}) {
