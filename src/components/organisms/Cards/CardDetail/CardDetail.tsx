@@ -3,7 +3,12 @@ import { VFC } from 'react';
 import { PriceDisplay } from 'src/components/atoms/Price/PriceDisplay';
 import { useItem } from 'src/hooks/useShopItem';
 import styled from 'styled-components';
-import { breakpoints, fontSizes, spacingSizes } from 'src/styles/Tokens';
+import {
+  breakpoints,
+  colors,
+  fontSizes,
+  spacingSizes,
+} from 'src/styles/Tokens';
 import { Tags } from 'src/components/organisms/Tags';
 
 export type CardDetailProps = {
@@ -64,9 +69,26 @@ const ImageWrapper = styled.div`
   }
 `;
 
+const SaleLabel = styled.div`
+  text-align: center;
+  color: white;
+  font-size: ${fontSizes.fontSize12};
+  background-color: ${colors.Red};
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.5;
+  height: 25px;
+  line-height: 25px;
+`;
+
 export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
   const item = useItem({ itemId });
   if (item === undefined) return <div>loading</div>;
+
+  const percentage =
+    (item.price.discount_amount / item.price.original_price) * 100;
+
   return (
     <CardWrapper>
       <ImageWrapper>
@@ -75,6 +97,7 @@ export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
           src={item.thumbnail}
           alt={`${item.name}のサムネイル画像`}
         />
+        <SaleLabel>{percentage}%OFF</SaleLabel>
       </ImageWrapper>
       <ItemContent>
         <ItemName>{item.name}</ItemName>
