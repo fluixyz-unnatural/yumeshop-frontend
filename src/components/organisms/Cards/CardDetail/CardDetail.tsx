@@ -97,7 +97,7 @@ export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
           src={item.thumbnail}
           alt={`${item.name}のサムネイル画像`}
         />
-        <SaleLabel>{percentage}%OFF</SaleLabel>
+        {item.price.discounted && <SaleLabel>{percentage}%OFF</SaleLabel>}
       </ImageWrapper>
       <ItemContent>
         <ItemName>{item.name}</ItemName>
