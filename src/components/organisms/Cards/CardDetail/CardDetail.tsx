@@ -20,8 +20,8 @@ const CardWrapper = styled.div`
 const ItemContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 8px;
-  gap: 8px;
+  margin: ${spacingSizes.xs};
+  gap: ${spacingSizes.xs};
 `;
 
 const ItemName = styled.h4`
