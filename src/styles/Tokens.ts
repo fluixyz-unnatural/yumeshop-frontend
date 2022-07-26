@@ -33,9 +33,16 @@ export const fontSizes = {
   fontSize28: '28px',
   fontSize30: '30px',
   fontSize32: '32px',
+  fontSize36: '36px',
 } as const;
 
 export const fonts = {
   NotoSansJP: `'Noto Sans JP', sans-serif`,
   Roboto: `'Roboto', sans-serif`,
+} as const;
+
+export const breakpoints = {
+  mb: '375px',
+  tb: '768px',
+  pc: '1152px',
 } as const;
