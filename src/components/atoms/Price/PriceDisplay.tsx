@@ -48,6 +48,7 @@ export const PriceDisplay: VFC<PriceProps> = ({ price }) => {
     );
   return (
     <PriceWrapper>
+      税抜
       <PriceSpan price={price}>{price.selling_price}</PriceSpan>円
     </PriceWrapper>
   );
