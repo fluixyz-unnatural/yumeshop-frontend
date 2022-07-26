@@ -23,27 +23,27 @@ const ItemContent = styled.div`
   flex-direction: column;
   margin: ${spacingSizes.xs};
   gap: ${spacingSizes.xs};
+  @media screen and (min-width: ${breakpoints.pc}) {
+    margin: ${spacingSizes.sm};
+    gap: ${spacingSizes.sm};
+  }
 `;
 
 const ItemName = styled.h4`
-  @media screen and (min-width: ${breakpoints.mb}) {
-    font-size: ${fontSizes.fontSize24};
-  }
-  @media screen and (min-width: ${breakpoints.tb}) {
-    font-size: ${fontSizes.fontSize24};
-  }
+  font-size: ${fontSizes.fontSize14};
+
   @media screen and (min-width: ${breakpoints.pc}) {
-    font-size: ${fontSizes.fontSize36};
+    font-size: ${fontSizes.fontSize24};
   }
   font-weight: normal;
 `;
 
 const PriceWrapper = styled.div`
   position: absolute;
-  @media screen and (min-width: ${breakpoints.mb}) {
+
     bottom: ${spacingSizes.xs};
     right: ${spacingSizes.xs};
-  }
+
   @media screen and (min-width: ${breakpoints.tb}) {
     bottom: ${spacingSizes.xs};
     right: ${spacingSizes.xs};
