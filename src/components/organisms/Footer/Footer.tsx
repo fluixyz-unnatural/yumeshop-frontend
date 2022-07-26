@@ -43,17 +43,14 @@ export const Footer: VFC = () => (
     <LinksWrapper>
       <LinksLine>
         <Link href="/">メニューメニュー</Link>｜
-        <Link href="/">メニューメニュー</Link>
+        <Link href="/">メニューメニュー</Link>｜<Link href="/">メニュー</Link>
       </LinksLine>
       <LinksLine>
-        <Link href="/">メニュー</Link>｜<Link href="/">メニューメニュー</Link>｜
-        <Link href="/">メニュー</Link>
+        <Link href="/">メニューメニュー</Link>｜<Link href="/">メニュー</Link>｜
+        <Link href="/">メニュー</Link>｜<Link href="/">メニュー</Link>
       </LinksLine>
       <LinksLine>
-        <Link href="/">メニュー</Link>｜<Link href="/">メニュー</Link>｜
-        <Link href="/">メニューメニュー</Link>
-      </LinksLine>
-      <LinksLine>
+        <Link href="/">メニューメニュー</Link>｜
         <Link href="/">メニューメニュー</Link>｜
         <Link href="/">メニューメニュー</Link>
       </LinksLine>
