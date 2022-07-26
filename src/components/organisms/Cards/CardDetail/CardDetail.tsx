@@ -11,6 +11,7 @@ import {
 } from 'src/styles/Tokens';
 import { Tags } from 'src/components/organisms/Tags';
 import Color from 'color';
+import { discountPercentage } from 'src/utils/Price';
 
 export type CardDetailProps = {
   itemId: string;
@@ -91,8 +92,7 @@ export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
   const item = useItem({ itemId });
   if (item === undefined) return <div>loading</div>;
 
-  const percentage =
-    (item.price.discount_amount / item.price.original_price) * 100;
+  const percentage = discountPercentage(item.price);
 
   return (
     <CardWrapper>
