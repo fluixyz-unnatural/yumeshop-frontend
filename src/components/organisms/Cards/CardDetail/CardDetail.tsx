@@ -80,6 +80,11 @@ const SaleLabel = styled.div`
   opacity: 0.5;
   height: 25px;
   line-height: 25px;
+  @media screen and (min-width: ${breakpoints.pc}) {
+    font-size: ${fontSizes.fontSize20};
+    height: 45px;
+    line-height: 45px;
+  }
 `;
 
 export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
