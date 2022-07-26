@@ -1,10 +1,10 @@
 import React, { VFC } from 'react';
-import { LinkButton } from 'src/components/atoms/Button';
+import { LinkButton, LinkButtonProps } from 'src/components/atoms/Button';
 import { breakpoints, colors, spacingSizes } from 'src/styles/Tokens';
 import styled from 'styled-components';
 
 export type BreadCrumbProps = {
-  links: { label: string; href: string }[];
+  links: LinkButtonProps[];
   current: string;
 };
 
