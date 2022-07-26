@@ -57,6 +57,7 @@ const PriceWrapper = styled.div`
 const ImageWrapper = styled.div`
   width: 144px;
   height: 144px;
+  position: relative;
   @media screen and (min-width: ${breakpoints.pc}) {
     width: 244px;
     height: 244px;
@@ -70,8 +71,7 @@ export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
     <CardWrapper>
       <ImageWrapper>
         <Image
-          width={244}
-          height={244}
+          layout="fill"
           src={item.thumbnail}
           alt={`${item.name}のサムネイル画像`}
         />
