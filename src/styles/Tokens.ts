@@ -33,6 +33,7 @@ export const fontSizes = {
   fontSize28: '28px',
   fontSize30: '30px',
   fontSize32: '32px',
+  fontSize36: '36px',
 } as const;
 
 export const fonts = {
