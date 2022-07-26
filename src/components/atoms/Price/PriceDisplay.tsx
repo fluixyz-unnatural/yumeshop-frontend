@@ -1,5 +1,10 @@
 import { VFC } from 'react';
-import { fontSizes, colors, spacingSizes } from 'src/styles/Tokens';
+import {
+  fontSizes,
+  colors,
+  spacingSizes,
+  breakpoints,
+} from 'src/styles/Tokens';
 import { Price } from 'src/types/mock-api';
 import styled from 'styled-components';
 
@@ -10,6 +15,10 @@ export type PriceProps = {
 const PriceSpan = styled.span<PriceProps>`
   font-size: ${fontSizes.fontSize24};
   margin: 0 ${spacingSizes.xxxs};
+  @media screen and (min-width: ${breakpoints.pc}) {
+    font-size: ${fontSizes.fontSize36};
+    margin: 0 ${spacingSizes.xs};
+  }
   color: ${(props) => (props.price.discounted ? colors.Red : colors.Black)};
 `;
 const YenSpan = styled.span<PriceProps>`
@@ -22,6 +31,9 @@ const DisabledSpan = styled.span`
 
 const PriceWrapper = styled.div`
   font-size: ${fontSizes.fontSize14};
+  @media screen and (min-width: ${breakpoints.pc}) {
+    font-size: ${fontSizes.fontSize24};
+  }
 `;
 
 export const PriceDisplay: VFC<PriceProps> = ({ price }) => {
