@@ -4,7 +4,7 @@ import { PriceDisplay } from 'src/components/atoms/Price/PriceDisplay';
 import { useItem } from 'src/hooks/useShopItem';
 import styled from 'styled-components';
 import { breakpoints, fontSizes, spacingSizes } from 'src/styles/Tokens';
-import { Tags } from '../../Tags';
+import { Tags } from 'src/components/organisms/Tags';
 
 export type CardDetailProps = {
   itemId: string;
