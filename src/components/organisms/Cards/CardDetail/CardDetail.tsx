@@ -41,8 +41,8 @@ const ItemName = styled.h4`
 const PriceWrapper = styled.div`
   position: absolute;
 
-    bottom: ${spacingSizes.xs};
-    right: ${spacingSizes.xs};
+  bottom: ${spacingSizes.xs};
+  right: ${spacingSizes.xs};
 
   @media screen and (min-width: ${breakpoints.tb}) {
     bottom: ${spacingSizes.xs};
@@ -54,17 +54,28 @@ const PriceWrapper = styled.div`
   } ;
 `;
 
+const ImageWrapper = styled.div`
+  width: 144px;
+  height: 144px;
+  @media screen and (min-width: ${breakpoints.pc}) {
+    width: 244px;
+    height: 244px;
+  }
+`;
+
 export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
   const item = useItem({ itemId });
   if (item === undefined) return <div>loading</div>;
   return (
     <CardWrapper>
-      <Image
-        width="144"
-        height="144"
-        src={item.thumbnail}
-        alt={`${item.name}のサムネイル画像`}
-      />
+      <ImageWrapper>
+        <Image
+          width={244}
+          height={244}
+          src={item.thumbnail}
+          alt={`${item.name}のサムネイル画像`}
+        />
+      </ImageWrapper>
       <ItemContent>
         <ItemName>{item.name}</ItemName>
         <Tags tags={item.tags} />
