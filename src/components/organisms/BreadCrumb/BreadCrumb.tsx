@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import React, { VFC } from 'react';
 import { LinkButton } from 'src/components/atoms/Button';
 import { breakpoints, colors, spacingSizes } from 'src/styles/Tokens';
 import styled from 'styled-components';
@@ -24,10 +24,10 @@ const Wrapper = styled.div`
 export const BreadCrumb: VFC<BreadCrumbProps> = ({ links, current }) => (
   <Wrapper>
     {links.map((e) => (
-      <>
+      <React.Fragment key={e.href}>
         <LinkButton {...e} />
-        {'>'}
-      </>
+        <span>{'>'}</span>
+      </React.Fragment>
     ))}
     <span>{current}</span>
   </Wrapper>
