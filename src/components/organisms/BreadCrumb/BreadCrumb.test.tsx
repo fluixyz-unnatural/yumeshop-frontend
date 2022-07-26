@@ -8,8 +8,10 @@ const { Default } = composeStories(BreadCrumbStory);
 describe('BreadCrumb', () => {
   it('TOP > xxx一覧 > hoge', () => {
     render(<Default />);
-    expect(screen.getByText('TOP').tagName).toBe('A');
-    expect(screen.getByText('xxx一覧').tagName).toBe('A');
+    const topHref = screen.getByText('TOP').getAttribute('href');
+    expect(topHref).toBe('/');
+    const listHref = screen.getByText('xxx一覧').getAttribute('href');
+    expect(listHref).toBe('/list');
     expect(screen.getByText('hoge')).toBeInTheDocument();
   });
 });
