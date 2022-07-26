@@ -3,6 +3,7 @@ import { VFC } from 'react';
 import { PriceDisplay } from 'src/components/atoms/Price/PriceDisplay';
 import { useItem } from 'src/hooks/useShopItem';
 import styled from 'styled-components';
+import { breakpoints, fontSizes, spacingSizes } from 'src/styles/Tokens';
 import { Tags } from '../../Tags';
 
 export type CardDetailProps = {
@@ -25,14 +26,32 @@ const ItemContent = styled.div`
 `;
 
 const ItemName = styled.h4`
-  font-size: 1rem;
+  @media screen and (min-width: ${breakpoints.mb}) {
+    font-size: ${fontSizes.fontSize24};
+  }
+  @media screen and (min-width: ${breakpoints.tb}) {
+    font-size: ${fontSizes.fontSize24};
+  }
+  @media screen and (min-width: ${breakpoints.pc}) {
+    font-size: ${fontSizes.fontSize36};
+  }
   font-weight: normal;
 `;
 
 const PriceWrapper = styled.div`
   position: absolute;
-  bottom: 12px;
-  right: 8px;
+  @media screen and (min-width: ${breakpoints.mb}) {
+    bottom: ${spacingSizes.xs};
+    right: ${spacingSizes.xs};
+  }
+  @media screen and (min-width: ${breakpoints.tb}) {
+    bottom: ${spacingSizes.xs};
+    right: ${spacingSizes.xs};
+  }
+  @media screen and (min-width: ${breakpoints.pc}) {
+    bottom: ${spacingSizes.sm};
+    right: ${spacingSizes.sm};
+  } ;
 `;
 
 export const CardDetail: VFC<CardDetailProps> = ({ itemId }) => {
