@@ -19,6 +19,16 @@ const Wrapper = styled.div`
     gap: ${spacingSizes.sm};
     padding: ${spacingSizes.sm};
   }
+  & > * {
+    flex-shrink: 0;
+  }
+`;
+
+const CurrentWrapper = styled.span`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 1;
 `;
 
 export const BreadCrumb: VFC<BreadCrumbProps> = ({ links, current }) => (
@@ -29,6 +39,6 @@ export const BreadCrumb: VFC<BreadCrumbProps> = ({ links, current }) => (
         <span>{'>'}</span>
       </React.Fragment>
     ))}
-    <span>{current}</span>
+    <CurrentWrapper>{current}</CurrentWrapper>
   </Wrapper>
 );
