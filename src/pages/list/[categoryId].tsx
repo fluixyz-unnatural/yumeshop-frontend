@@ -51,10 +51,17 @@ const NoItemContainer = styled.div`
   align-items: center;
   font-weight: bold;
   font-size: ${fontSizes.fontSize24};
-  margin: ${spacingSizes.xl} ${spacingSizes.lg};
+  margin: ${spacingSizes.xl} 0;
   @media screen and (min-width: ${breakpoints.pc}) {
     font-size: ${fontSizes.fontSize32};
-    margin: ${spacingSizes.xl};
+    margin: ${spacingSizes.xl} 0;
+  }
+`;
+
+const NoItemText = styled.p`
+  font-size: ${fontSizes.fontSize24};
+  @media screen and (min-width: ${breakpoints.pc}) {
+    font-size: ${fontSizes.fontSize32};
   }
 `;
 
@@ -115,7 +122,7 @@ const List: NextPage = () => {
                 height="400"
               />
             </IconWrapper>
-            <p>商品がありませんでした</p>
+            <NoItemText>商品がありませんでした</NoItemText>
           </NoItemContainer>
         )}
       </Wrapper>
