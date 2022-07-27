@@ -58,7 +58,7 @@ const List: NextPage = () => {
         </HeadWrapper>
         <ItemContainer>
           {items?.map((e) => (
-            <Link href={`/detail/${e.id}`} passHref>
+            <Link key={e.id} href={`/detail/${e.id}`} passHref>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a>
                 <CardDetail itemId={e.id} />
