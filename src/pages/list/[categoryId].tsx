@@ -15,7 +15,6 @@ import {
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background-color: ${colors.YumeWhiteGreen};
   height: fit-content;
   min-height: 100%;
   padding: ${spacingSizes.sm};
