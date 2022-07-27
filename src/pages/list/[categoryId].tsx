@@ -51,24 +51,27 @@ const NoItemContainer = styled.div`
   align-items: center;
   font-weight: bold;
   font-size: ${fontSizes.fontSize24};
+  margin: ${spacingSizes.xl} ${spacingSizes.lg};
   @media screen and (min-width: ${breakpoints.pc}) {
     font-size: ${fontSizes.fontSize32};
+    margin: ${spacingSizes.xl};
   }
 `;
 
 const IconWrapper = styled.div`
   width: 140px;
   height: 140px;
-  margin-bottom: 24px;
+  margin-bottom: ${spacingSizes.md};
+  position: relative;
   @media screen and (min-width: ${breakpoints.tb}) {
     width: 244px;
-    width: 244px;
-    margin-bottom: 48px;
+    height: 244px;
+    margin-bottom: ${spacingSizes.md};
   }
   @media screen and (min-width: ${breakpoints.pc}) {
     width: 350px;
-    width: 350px;
-    margin-bottom: 48px;
+    height: 350px;
+    margin-bottom: ${spacingSizes.lg};
   }
 `;
 
@@ -105,7 +108,12 @@ const List: NextPage = () => {
         ) : (
           <NoItemContainer>
             <IconWrapper>
-              <Image src="/icons/NoHamburger.svg" layout="fill" />
+              <Image
+                src="/icons/NoHamburger.svg"
+                layout="responsive"
+                width="400"
+                height="400"
+              />
             </IconWrapper>
             <p>商品がありませんでした</p>
           </NoItemContainer>
