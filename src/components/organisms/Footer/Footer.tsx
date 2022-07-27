@@ -10,8 +10,8 @@ import Link from 'next/link';
 
 const Wrapper = styled.footer`
   width: 100%;
-  padding: 16px;
-  font-size: 12px;
+  padding: ${spacingSizes.sm};
+  font-size: ${fontSizes.fontSize12};
   background-color: ${colors.White};
   display: flex;
   flex-flow: column;
@@ -21,7 +21,7 @@ const Wrapper = styled.footer`
   @media screen and (min-width: ${breakpoints.pc}) {
     font-size: ${fontSizes.fontSize18};
     height: 197px;
-    padding: 16px 64px;
+    padding: ${spacingSizes.sm} ${spacingSizes.lg};
   }
 `;
 const LinksWrapper = styled.div`
