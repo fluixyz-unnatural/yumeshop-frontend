@@ -10,8 +10,9 @@ import { breakpoints, colors, spacingSizes } from 'src/styles/Tokens';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  padding: ${spacingSizes.sm};
   background-color: ${colors.YumeWhiteGreen};
+  padding: ${spacingSizes.sm};
+
   @media screen and (min-width: ${breakpoints.tb}) {
     padding: ${spacingSizes.md};
   }
@@ -19,23 +20,29 @@ const Wrapper = styled.div`
     padding: ${spacingSizes.lg};
   }
 `;
+
 const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${spacingSizes.xs};
   margin-bottom: ${spacingSizes.xl};
+
+  gap: ${spacingSizes.xs};
+
   @media screen and (min-width: ${breakpoints.pc}) {
     gap: ${spacingSizes.sm};
   }
 `;
+
 const HeadWrapper = styled.div`
   margin-bottom: ${spacingSizes.sm};
 `;
+
 const List: NextPage = () => {
   const router = useRouter();
   const { categoryId } = router.query;
   const items = useShopItems(categoryId as string);
   const category = useCategory(categoryId as string);
+
   if (category === undefined) return <div>loading</div>;
   return (
     <Layout
@@ -51,8 +58,11 @@ const List: NextPage = () => {
         </HeadWrapper>
         <ItemContainer>
           {items?.map((e) => (
-            <Link href={`/detail/${e.id}`}>
-              <CardDetail itemId={e.id} />
+            <Link href={`/detail/${e.id}`} passHref>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a>
+                <CardDetail itemId={e.id} />
+              </a>
             </Link>
           ))}
         </ItemContainer>
