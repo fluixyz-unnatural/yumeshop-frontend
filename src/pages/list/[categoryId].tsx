@@ -6,7 +6,12 @@ import { CardDetail } from 'src/components/organisms/Cards/CardDetail';
 import { Layout } from 'src/components/organisms/Layout/Layout';
 import { useCategory } from 'src/hooks/useCategory';
 import { useShopItems } from 'src/hooks/useShopItems';
-import { breakpoints, colors, spacingSizes } from 'src/styles/Tokens';
+import {
+  breakpoints,
+  colors,
+  fontSizes,
+  spacingSizes,
+} from 'src/styles/Tokens';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -35,6 +40,13 @@ const ItemContainer = styled.div`
 
 const HeadWrapper = styled.div`
   margin-bottom: ${spacingSizes.sm};
+  font-size: ${fontSizes.fontSize24};
+  @media screen and (min-width: ${breakpoints.pc}) {
+    font-size: ${fontSizes.fontSize32};
+  }
+  & h1 {
+    font-size: 1em;
+  }
 `;
 
 const List: NextPage = () => {
