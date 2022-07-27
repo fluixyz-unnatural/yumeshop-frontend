@@ -14,13 +14,12 @@ export type LayoutProps = {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 `;
 const Content = styled.div`
   flex-grow: 1;
-`;
-const FooterWrapper = styled.div`
-  justify-self: flex-end;
+  height: 10px;
 `;
 
 export const Layout: VFC<LayoutProps> = ({
@@ -37,9 +36,7 @@ export const Layout: VFC<LayoutProps> = ({
       <BreadCrumb {...breadcrumbProps} />
       <Content>{children}</Content>
       <BreadCrumb {...breadcrumbProps} />
-      <FooterWrapper>
-        <Footer />
-      </FooterWrapper>
+      <Footer />
     </Container>
   </>
 );
