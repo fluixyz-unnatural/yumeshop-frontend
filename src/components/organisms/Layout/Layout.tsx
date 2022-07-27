@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import { ReactNode, VFC } from 'react';
-import { Container, Main } from 'src/styles/Home';
-import styled from 'styled-components';
 import { BreadCrumb, BreadCrumbProps } from '../BreadCrumb';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
