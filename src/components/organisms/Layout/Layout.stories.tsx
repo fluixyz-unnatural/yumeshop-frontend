@@ -11,4 +11,4 @@ const Template: Story = () => (
   <Layout breadcrumbProps={{ current: 'current', links: [] }} title="title" />
 );
 
-export const footer = Template.bind({});
+export const Default = Template.bind({});
