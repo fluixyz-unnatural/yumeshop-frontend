@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Headline } from 'src/components/atoms/Headline';
-import { NoHamburger } from 'src/components/atoms/Icons';
 import { CardDetail } from 'src/components/organisms/Cards/CardDetail';
 import { Layout } from 'src/components/organisms/Layout/Layout';
 import { useCategory } from 'src/hooks/useCategory';
@@ -105,7 +105,7 @@ const List: NextPage = () => {
         ) : (
           <NoItemContainer>
             <IconWrapper>
-              <NoHamburger width="100%" height="100%" />
+              <Image src="/icons/NoHamburger.svg" layout="fill" />
             </IconWrapper>
             <p>商品がありませんでした</p>
           </NoItemContainer>
