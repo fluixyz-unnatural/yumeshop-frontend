@@ -31,7 +31,6 @@ const Wrapper = styled.div`
 const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${spacingSizes.xl};
 
   gap: ${spacingSizes.xs};
 

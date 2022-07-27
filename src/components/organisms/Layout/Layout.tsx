@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { ReactNode, VFC } from 'react';
+import { colors } from 'src/styles/Tokens';
 import styled from 'styled-components';
 import { BreadCrumb, BreadCrumbProps } from '../BreadCrumb';
 import { Footer } from '../Footer';
@@ -19,7 +20,7 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   flex-grow: 1;
-  height: 10px;
+  background: ${colors.YumeWhiteGreen};
 `;
 
 export const Layout: VFC<LayoutProps> = ({
