@@ -49,16 +49,14 @@ const NoItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-weight: bold;
-  font-size: ${fontSizes.fontSize24};
   margin: ${spacingSizes.xl} 0;
   @media screen and (min-width: ${breakpoints.pc}) {
-    font-size: ${fontSizes.fontSize32};
     margin: ${spacingSizes.xl} 0;
   }
 `;
 
 const NoItemText = styled.p`
+  font-weight: bold;
   font-size: ${fontSizes.fontSize24};
   @media screen and (min-width: ${breakpoints.pc}) {
     font-size: ${fontSizes.fontSize32};
