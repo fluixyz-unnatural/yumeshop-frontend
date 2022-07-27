@@ -4,6 +4,7 @@ import { Footer } from './index';
 export default {
   component: Footer,
   title: 'organisms/Footer',
+  parameters: { layout: 'fullscreen' },
 } as Meta;
 
 const Template: Story = () => <Footer />;
